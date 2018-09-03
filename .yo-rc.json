@@ -1,7 +1,8 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "vn.its"
+      "packageName": "vn.its",
+      "nativeLanguage": "vi"
     },
     "jhipsterVersion": "4.14.5",
     "baseName": "jhipster",
@@ -20,13 +21,17 @@
     "buildTool": "maven",
     "enableSocialSignIn": false,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "930b03e76cd6b5854208fa3c07c69c24d6539511",
+    "jwtSecretKey": "450de361d758a9dfbdb76d97ca23c02d5cdc975d",
     "clientFramework": "angular1",
     "useSass": false,
     "clientPackageManager": "yarn",
     "applicationType": "monolith",
     "testFrameworks": [],
     "jhiPrefix": "jhi",
-    "enableTranslation": false
+    "enableTranslation": true,
+    "nativeLanguage": "vi",
+    "languages": [
+      "vi"
+    ]
   }
 }
