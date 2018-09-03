@@ -1,6 +1,6 @@
 # info
 
-    Monolithic application - JWT - Oracle Database - Maven - AngularJS - Ehcache
+    Monolithic application - JWT - Oracle Database - Maven - AngularJS - Ehcache - Hibernate 2nd level cache
 
 # jhipster
 This application was generated using JHipster 4.14.5, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.14.5](http://www.jhipster.tech/documentation-archive/v4.14.5).

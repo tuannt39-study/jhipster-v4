@@ -7,6 +7,8 @@ import org.ehcache.expiry.Duration;
 import org.ehcache.expiry.Expirations;
 import org.ehcache.jsr107.Eh107Configuration;
 
+import io.github.jhipster.config.jcache.BeanClassLoaderAwareJCacheRegionFactory;
+
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer;
@@ -20,6 +22,7 @@ public class CacheConfiguration {
     private final javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration;
 
     public CacheConfiguration(JHipsterProperties jHipsterProperties) {
+        BeanClassLoaderAwareJCacheRegionFactory.setBeanClassLoader(this.getClass().getClassLoader());
         JHipsterProperties.Cache.Ehcache ehcache =
             jHipsterProperties.getCache().getEhcache();
 
@@ -35,6 +38,9 @@ public class CacheConfiguration {
         return cm -> {
             cm.createCache(vn.its.repository.UserRepository.USERS_BY_LOGIN_CACHE, jcacheConfiguration);
             cm.createCache(vn.its.repository.UserRepository.USERS_BY_EMAIL_CACHE, jcacheConfiguration);
+            cm.createCache(vn.its.domain.User.class.getName(), jcacheConfiguration);
+            cm.createCache(vn.its.domain.Authority.class.getName(), jcacheConfiguration);
+            cm.createCache(vn.its.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
