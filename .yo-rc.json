@@ -21,7 +21,7 @@
     "buildTool": "maven",
     "enableSocialSignIn": false,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "450de361d758a9dfbdb76d97ca23c02d5cdc975d",
+    "jwtSecretKey": "9b1971155f263380af310357ecea892a9493ec52",
     "clientFramework": "angular1",
     "useSass": false,
     "clientPackageManager": "yarn",
@@ -31,7 +31,8 @@
     "enableTranslation": true,
     "nativeLanguage": "vi",
     "languages": [
-      "vi"
+      "vi",
+      "en"
     ]
   }
 }
